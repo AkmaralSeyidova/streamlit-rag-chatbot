@@ -1,40 +1,45 @@
-# Streamlit UI
-streamlit==1.40.1
+# Streamlit
+streamlit==1.33.0
 
-# PDF loading
-pypdf==5.1.0
-PyMuPDF==1.24.5  # Optional alternative to PyPDFLoader
+# PDF loaders
+PyMuPDF==1.23.3
+pypdf==3.17.4
 
-# LangChain core and plugins
-langchain==0.3.7
-langchain-community==0.3.7
-langchain-core==0.3.19
-langchain-text-splitters==0.3.2
+# Core LangChain ecosystem
+
+langchain-text-splitters==0.3.8
 langchain-huggingface==0.1.2
-langsmith==0.1.143
 
-# Vectorstore and embeddings
-faiss-cpu==1.9.0
-sentence-transformers==3.3.0
-huggingface-hub==0.26.2
+langchain==0.3.25
+langchain-core==0.3.64
+langchain-community==0.3.22
 
-# LLMs and inference
-transformers==4.46.2
-torch==2.5.1
+langsmith==0.3.45
+pydantic>=2.7.4,<3.0
+
+
+# Compatible with langchain-core 0.3.64
+pydantic-settings==2.4.0
+
+# Vector DB + Embeddings
+faiss-cpu==1.7.4
+sentence-transformers==2.6.1
+huggingface-hub==0.23.0 
+
+# LLMs
+transformers==4.40.0    
+torch==2.1.2
+sentencepiece==0.2.0
+tokenizers==0.19.1     
 
 # Utilities
 python-dotenv==1.0.1
-pandas==2.2.3
+pandas==2.2.1
 numpy==1.26.4
-scikit-learn==1.5.2
-
-# Required by langchain & hf
-requests==2.32.3
-tqdm==4.67.0
-typing-extensions==4.12.2
-pydantic==2.9.2
-pydantic-settings==2.6.1
-orjson==3.10.11
-
-# Optional: image support (used by PIL/Pillow)
-pillow==11.0.0
+scikit-learn==1.4.2
+requests==2.31.0
+tqdm==4.66.1
+typing-extensions==4.11.0
+orjson==3.9.15
+pillow==10.2.0
+langdetect==1.0.9
