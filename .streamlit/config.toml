@@ -1,0 +1,5 @@
+[compatibility]
+# Set the Python version for your app.
+# Streamlit Cloud supports Python 3.8, 3.9, 3.10, 3.11, and 3.12 (as of my last update).
+# Python 3.11 is a good stable choice for torch 2.x.
+python_version = "3.11"
