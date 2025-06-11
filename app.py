@@ -2,7 +2,7 @@ import streamlit as st
 from langchain.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS  # ✅ Updated import
 from langchain.chat_models import ChatHuggingFace
 from langchain.llms import HuggingFaceEndpoint
 from langchain.hub import pull
@@ -92,7 +92,7 @@ if uploaded_file:
             st.sidebar.error("❌ Failed to split document.")
             st.stop()
 
-        embeddings = HuggingFaceEmbeddings()
+        embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")  # ✅ Explicit model
         vectorstore = FAISS.from_documents(splits, embedding=embeddings)
 
         st.sidebar.success(f"✅ PDF processed! Pages: {len(docs)}")
