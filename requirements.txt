@@ -24,7 +24,6 @@ pydantic-settings==2.4.0
 # Vector DB + Embeddings
 faiss-cpu==1.7.4
 sentence-transformers==2.6.1
-
 huggingface-hub==0.23.0
 
 # LLMs
